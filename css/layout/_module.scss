@@ -1,0 +1,62 @@
+/*------------------- Wraper -------------------*/
+.wrapper {
+    margin: auto;
+    overflow: hidden;
+    min-width: 1500px;
+}
+.row-clear {
+    @include clearfix;
+}
+.container {
+    @include clearfix;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.grid {
+    padding: 15px;
+    float: left;
+    position: relative;
+    &-23 {
+        width: calc(100% - 33.33%);
+    }
+    &-13 {
+        width: 33.33%;
+    }
+    &-22 {
+        width: 50%;
+    }
+}
+
+/*------------------- Component -------------------*/
+// /*------------------- Typography -------------------*/
+.title-h2 {
+    font-size: 30px;
+    color: $color-c;
+    line-height: 1.8;
+    text-align: center;
+}
+.title-h3 {
+    font-size: 30px;
+}
+.title-h4 {
+    font-size: 20px;
+}
+.title_B {
+
+}
+.txt {
+    font-size: 16px;
+    color: $color-a;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: bold;  
+    display: inline-block;
+}
+
+// /*------------------- Form -------------------*/
+

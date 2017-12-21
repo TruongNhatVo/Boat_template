@@ -1,0 +1,45 @@
+/*======================================
+        Header
+======================================*/
+.header {
+	position: absolute;
+	width: 100%;
+	min-width: 1497px;
+	padding: 35px 0;
+	z-index: 9999;
+	&-wrap {
+		max-width: 1497px;
+	}
+	&-logo {
+		float: left;
+		@include width(162,1497);
+		padding-top: 5px;
+	}
+	#main-nav {
+		float: right;
+		@include width(565,1497);
+	}
+	&-nav {
+		li {
+			float: left;
+			width: calc(100% / 3);
+		}
+		a {
+			display: block;
+			color: white;
+			width: 100%;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			font-family: $font-heading;
+			padding: 12px 0;
+		}
+	}
+	&-signup {
+		border-color: white;
+		&:hover {
+			background: $color-primary;
+			color: white;
+		}
+	}
+}

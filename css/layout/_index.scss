@@ -1,0 +1,313 @@
+/*------------------------------------
+
+            index.html
+
+------------------------------------*/
+
+/*======================================
+        section top
+======================================*/
+.top {
+	padding-top: 295px;
+	height: 843px;
+	background: url('../img/bg_01.png') center center no-repeat fixed;
+	background-size: cover;
+	color: white;
+	text-transform: uppercase;
+	.container {
+		position: relative;
+		height: 100%;
+	}
+	&-title {
+		font-size: 72px;
+		font-weight: 700;
+		padding-bottom: 13px;
+		letter-spacing: 5px;
+	}
+	&-sub {
+		font-size: 30px;
+		font-family: $font-body;
+		padding-bottom: 84px;
+	}
+	&-infor {
+		padding: 30px 0;
+		background-color: rgb(255, 255, 255);
+		border-radius: 5px;	
+  		box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.059);
+  		position: absolute;
+  		bottom: -50px;
+  		color: $color-b;
+  		width: 100%;
+  		li {
+  			float: left;
+  			width: calc(100% / 4);
+  		}
+	}
+	&-content {
+		border-right: .5px solid $color-a;
+		&-last {
+			border-right: 0;
+		}
+	}
+	&-number {
+		font-weight: bold;
+		font-size: 30px;
+		padding-bottom: 18px;
+	}
+	&-description {
+		font-size: 18px;
+		text-transform: none;
+		color: $color-a;
+	}
+}
+
+.form-search {
+
+	&-input,
+	&-submit {
+		padding: 20px 30px;
+		font-family: $font-heading;
+		border: 0;
+		height: 55px;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+	&-input {
+		max-width: 572px;
+		width: 100%;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		&:focus {
+  			box-shadow: 0px 0px 30px 0px red;
+		}
+	}
+	&-submit {
+		text-align: right;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		position: relative;
+		right: 4px;
+		background: url('../img/icon_boat.png') 
+		35px 18px no-repeat,
+		$color-primary;
+		color: white;
+		cursor: pointer;
+		width: 200px;
+	}
+}
+
+/*======================================
+        section01
+======================================*/
+.section01 {
+	padding-top: 170px;
+	&-title {
+		padding-bottom: 10px;
+		&+.txt {
+			padding-bottom: 85px;
+		}
+	}
+	&-number {
+		background: url('../img/icon_boat.png') 
+		10px 14px no-repeat,
+		$color-primary;
+		padding: 15px;
+		text-align: right;
+		color: white;
+		width: 82px;
+		font-size: 16px;	
+		font-family: $font-body;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+	&-infor,&-country {
+		color: white;
+	}
+	&-infor {
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+	}
+	&-country {
+		padding-top: 10px;
+	}
+	&-more {
+		padding-top: 85px;
+	}
+	&-load-btn {
+		font-family: $font-txt;
+		padding: 25px 44px;
+		border: 1px solid $color-bd;
+		&:hover {
+			border-color: $color-primary;
+			color: $color-primary;
+		}
+		margin-bottom: 70px;
+	}
+}
+/*======================================
+        section02
+======================================*/
+.section02 {
+	background: url('../img/bg_02.png') center center
+	no-repeat;
+	background-size: cover;
+	padding-top: 170px;
+	&-title {
+		@extend .top-title;
+		color: white;
+		line-height: 1;
+	}
+	&-sub {
+		@extend .top-sub;
+		color: white;
+		text-transform: uppercase;	
+	}
+	&-btn {
+		@extend .section01-load-btn;
+		background: $color-primary;
+		color: white;
+		border-color: transparent;
+		margin-bottom: 160px; 
+		&:hover {
+			background: white;
+		}
+	}
+}
+
+/*======================================
+        section03
+======================================*/
+.section03 {
+	padding-top: 75px;
+	&-title {
+		padding-bottom: 10px;
+	}
+	&-sub {
+		padding-bottom: 75px;
+	}
+	&-price {
+		@extend .section01-number;
+		background-image: none;
+		width: 106px;
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0
+	}
+	&-infor {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		color: white;
+	}
+	&-boat {
+		text-align:left;
+		padding-bottom: 15px;
+	}
+	&-more {
+		padding-top: 70px;
+	}
+	&-load-btn {
+		@extend .section01-load-btn;
+	}
+}
+
+.location {
+	@include clearfix;
+	&-name,&-bearth {
+		float: left;
+		&:before {
+			display: inline-block;
+			padding-right: 10px;
+		}
+	}
+	&-name {
+		&:before {
+			content: url('../img/icon_location.png');
+		}
+	}
+	&-bearth {
+		margin-left: 40px;
+		font-family: $font-txt;
+		&:before {
+			content: url('../img/icon_acc.png');
+			
+		}
+	}
+}
+
+
+/*======================================
+        animation effect
+======================================*/
+.animate01{
+	overflow: hidden;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		background: rgba(255,255,255,.2);
+		border-radius: 100%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+	&:hover:before {
+		animation: circle 1s;
+	}
+}
+
+.animate02 {
+	overflow: hidden;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: -75%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+		transform: skewX(-25deg);
+	}
+	&:hover:before {
+		animation: shine 1.2s;
+	}
+}
+
+body {
+    animation: fadeIn 1.2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1.2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+// **********************************
+//   font-family
+// **********************************
+$font-body: 'Open Sans','Raleway', sans-serif;
+$font-heading: 'Raleway', sans-serif;
+$font-txt: 'Open Sans',sans-serif;
+// **********************************
+//   COLOR
+// **********************************
+// Brand Color
+$color-primary: #e7434e;
+
+// Application Color
+$color-a: #717171;
+$color-b: #343434;
+$color-c: #343435;
+$color-d: #262626;
+$color-ft: #404040;
+$color-bd:#bdbdbd;
+
+
+// **********************************
+//   EXTENDS
+// **********************************
+
+@mixin clearfix {
+    &:before,&:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+@mixin width($children,$parent) {
+	width: round(percentage($children/$parent));
+} 

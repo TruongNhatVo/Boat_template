@@ -1,0 +1,76 @@
+/*======================================
+        Footer
+======================================*/
+.footer {
+	background: url('../img/ft_bd_02.png') top left repeat-x, $color-ft;
+	font-size: 14px;
+	font-family: $font-txt;
+	color: white;
+	padding-bottom: 70px;
+	h3 {
+		text-transform: uppercase;
+		padding-bottom: 25px;
+	}
+	.group {
+		float: left;
+		padding-top: 60px;
+		li {
+			padding-bottom: 15px;
+		}
+		a:hover {
+			text-decoration: underline;	
+		}
+	}
+	&-group {
+		&01 {
+			@include width(271,1200);
+		}
+		&02 {
+			@include width(232,1200);
+		}
+		&03 {
+			width: 42%;
+		}
+		&04 {
+			@include width(186,1200);
+			float: right;
+		}
+	}
+	&-input,&-submit {
+		height: 42px;
+		padding: 0;
+	}
+	&-input {
+		@extend .form-search-input;
+		max-width: 270px;	
+		padding-left: 20px;
+	}
+	&-submit {
+		@extend .form-search-submit;
+		max-width: 146px;
+		background-image: none;
+		text-align: center;
+	}
+	&-social {
+		@include clearfix;
+		li {
+			float: left;
+			&:nth-child(1) a:before {
+				content: url('../img/icon_face.png');
+			}
+			&:nth-child(2) a:before {
+				content: url('../img/icon_twitter.png');
+			}
+			&:nth-child(3) a:before {
+				content: url('../img/icon_gplus.png');
+			}
+		}
+		a {
+			padding-top: 20px;
+			display: inline-block;
+			font-size: 0;
+			overflow: hidden;
+			padding-right: 20px;	
+		}
+	}
+}
